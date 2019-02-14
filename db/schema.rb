@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_14_233722) do
+ActiveRecord::Schema.define(version: 2019_02_14_234602) do
+
+  create_table "courses", force: :cascade do |t|
+    t.string "identifier"
+    t.string "title"
+    t.string "term"
+    t.integer "year", limit: 4
+    t.string "github_org"
+    t.string "site_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "students", force: :cascade do |t|
     t.string "first_name"
