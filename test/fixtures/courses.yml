@@ -4,7 +4,7 @@ app:
   identifier: COM 330
   title: Web Application Development
   term: Spring
-  year: 2019
+  year: <%= Date.today.year %>
   github_org: app-2019
   site_url: https://courses.karlstolley.com/app/
 
@@ -12,6 +12,6 @@ hci:
   identifier: ITMD 362
   title: Human-Computer Interaction and Web Design
   term: Spring
-  year: 2019
+  year: <%= Date.today.year %>
   github_org: itmd-362-2019
   site_url: https://courses.karlstolley.com/hci/
