@@ -28,4 +28,19 @@ class CourseTest < ActiveSupport::TestCase
       assert @course.valid?
     end
   end
+  test "course identifier must be unique on a given year and term" do
+    @app = courses(:app)
+    # Duplicate the app course's identifier from HCI
+    @app.identifier = courses(:hci).identifier
+    assert_not @app.valid?
+    @app.term = "Summer"
+    assert @app.valid?
+  end
+  test "course title must be unique on a given identifier, year, and term" do
+    @app = courses(:app)
+    # Duplicate the app course's title and identifier from HCI
+    @app.identifier = courses(:hci).identifier
+    @app.title = courses(:hci).title
+    assert_not @app.valid?
+  end
 end
