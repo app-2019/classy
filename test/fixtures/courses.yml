@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  identifier: MyString
-  title: MyString
-  term: MyString
-  year: 1
-  github_org: MyString
-  site_url: MyString
+app:
+  identifier: COM 330
+  title: Web Application Development
+  term: Spring
+  year: 2019
+  github_org: app-2019
+  site_url: https://courses.karlstolley.com/app/
 
-two:
-  identifier: MyString
-  title: MyString
-  term: MyString
-  year: 1
-  github_org: MyString
-  site_url: MyString
+hci:
+  identifier: ITMD 362
+  title: Human-Computer Interaction and Web Design
+  term: Spring
+  year: 2019
+  github_org: itmd-362-2019
+  site_url: https://courses.karlstolley.com/hci/

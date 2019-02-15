@@ -1,13 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  first_name: MyString
-  last_name: MyString
-  email_address: MyString
-  github_username: MyString
+jenny:
+  first_name: Jenny
+  last_name: Webapp
+  email_address: jenny@hawk.example.com
+  github_username: jenny_github
+  courses: app
 
-two:
-  first_name: MyString
-  last_name: MyString
-  email_address: MyString
-  github_username: MyString
+herman:
+  first_name: Herman
+  last_name: See-Eye
+  email_address: herman@hawk.example.com
+  github_username: herman_github
+  courses: hci
+
+melvin:
+  first_name: Melvin
+  last_name: Ambition
+  email_address: melvin@hawk.example.com
+  github_username: melvin_github
+  courses: hci, app
