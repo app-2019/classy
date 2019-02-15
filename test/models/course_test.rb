@@ -19,4 +19,13 @@ class CourseTest < ActiveSupport::TestCase
     @course.year = current_year + 1
     assert @course.valid?
   end
+  test "term must be either Spring, Summer, or Fall" do
+    @course = courses(:hci)
+    @course.term = "Autumn"
+    assert_not @course.valid?
+    ['Spring','Summer','Fall'].each do |t|
+      @course.term = t
+      assert @course.valid?
+    end
+  end
 end
