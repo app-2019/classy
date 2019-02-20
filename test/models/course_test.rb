@@ -8,20 +8,20 @@ class CourseTest < ActiveSupport::TestCase
   test "count students through courses" do
     assert_equal 2, @hci.students.length
   end
+
   test "year must be four digits, now or in the future" do
     current_year = Date.today.year
-    @course = courses(:hci)
-    assert_equal 4, @course.year.to_s.length
-    @course.year = 55555
-    assert_not @course.valid?
-    @course.year = "two-thousand and twenty"
-    assert_not @course.valid?
-    @course.year = current_year - 1
-    assert_not @course.valid?
-    @course.year = current_year
-    assert @course.valid?
-    @course.year = current_year + 1
-    assert @course.valid?
+    assert_equal 4, @hci.year.to_s.length
+    @hci.year = 55555
+    assert_not @hci.valid?
+    @hci.year = "two-thousand and twenty"
+    assert_not @hci.valid?
+    @hci.year = current_year - 1
+    assert_not @hci.valid?
+    @hci.year = current_year
+    assert @hci.valid?
+    @hci.year = current_year + 1
+    assert @hci.valid?
   end
   test "term must be either Spring, Summer, or Fall" do
     @course = courses(:hci)
