@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class CourseTest < ActiveSupport::TestCase
+  setup do
+    @hci = courses(:hci)
+  end
+
   test "count students through courses" do
-    assert_equal 2, courses(:hci).students.length
+    assert_equal 2, @hci.students.length
   end
   test "year must be four digits, now or in the future" do
     current_year = Date.today.year
