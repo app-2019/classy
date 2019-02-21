@@ -13,11 +13,11 @@ class CourseTest < ActiveSupport::TestCase
     current_year = Date.today.year
     assert_equal 4, @hci.year.to_s.length
     @hci.year = 55555
-    assert_not @hci.valid?
+    refute @hci.valid?
     @hci.year = "two-thousand and twenty"
-    assert_not @hci.valid?
+    refute @hci.valid?
     @hci.year = current_year - 1
-    assert_not @hci.valid?
+    refute @hci.valid?
     @hci.year = current_year
     assert @hci.valid?
     @hci.year = current_year + 1
