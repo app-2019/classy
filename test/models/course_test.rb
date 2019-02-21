@@ -14,6 +14,7 @@ class CourseTest < ActiveSupport::TestCase
     assert_equal 4, @hci.year.to_s.length
     @hci.year = 55555
     refute @hci.valid?
+    assert @hci.errors[:year].include?("must be a four-digit year"), "error message missing or mismatched"
     @hci.year = "two-thousand and twenty"
     refute @hci.valid?
     @hci.year = current_year - 1
